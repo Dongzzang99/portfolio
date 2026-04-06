@@ -16,6 +16,7 @@ import {
   SiNextdotjs,
   SiTailwindcss,
 } from "react-icons/si"; // 기술 스택 아이콘 import
+const basePath = process.env.NODE_ENV === "production" ? "/portfolio" : "";
 
 export default function Home() {
   return (
@@ -34,7 +35,7 @@ export default function Home() {
                 {/* 프로필 이미지 */}
                 <div className="hero-profile-image">
                   <Image
-                    src="/profile.png"
+                    src={`${basePath}/profile.png`}
                     alt="강동현 프로필"
                     width={200}
                     height={200}

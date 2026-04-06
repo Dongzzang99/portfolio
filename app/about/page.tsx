@@ -1,7 +1,7 @@
 //about
 import Navbar from "@/components/Navbar";
 import Image from "next/image"; //이미지 가져오기
-
+const basePath = process.env.NODE_ENV === "production" ? "/portfolio" : "";
 
 export default function AboutPage() {
   return (
@@ -21,7 +21,7 @@ export default function AboutPage() {
             <div style={{ display: "flex", gap: 28, alignItems: "center", flexWrap: "wrap" }}>
               
               <Image
-                src="/photo1.jpg"
+                src={`${basePath}/photo1.jpg`}
                 alt="강동현 프로필"
                 width={230}
                 height={230}
@@ -32,7 +32,7 @@ export default function AboutPage() {
                 }}
               />
               <Image
-                src="/photo2.jpg"
+                src={`${basePath}/photo2.jpg`}
                 alt="강동현 프로필"
                 width={230}
                 height={230}
