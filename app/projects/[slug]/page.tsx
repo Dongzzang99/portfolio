@@ -1,8 +1,15 @@
-//상세페이지
 import Navbar from "@/components/Navbar";
 import { projects } from "@/lib/projects";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+
+export const dynamicParams = false;
+
+export function generateStaticParams() {
+  return projects.map((project) => ({
+    slug: project.slug,
+  }));
+}
 
 type Props = {
   params: Promise<{ slug: string }>;
