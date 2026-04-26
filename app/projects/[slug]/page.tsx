@@ -30,7 +30,14 @@ export default async function ProjectDetailPage({ params }: Props) {
       <main className="section">
         <div className="container">
           <div className="card" style={{ padding: 36, maxWidth: 980 }}>
-            <div style={{ display: "flex", flexWrap: "wrap", gap: 10, marginBottom: 16 }}>
+            <div
+              style={{
+                display: "flex",
+                flexWrap: "wrap",
+                gap: 10,
+                marginBottom: 16,
+              }}
+            >
               {project.tech.map((item) => (
                 <span key={item} className="badge">
                   {item}
@@ -42,7 +49,10 @@ export default async function ProjectDetailPage({ params }: Props) {
               {project.title}
             </h1>
 
-            <p className="muted" style={{ lineHeight: 1.9, fontSize: 17, margin: 0 }}>
+            <p
+              className="muted"
+              style={{ lineHeight: 1.9, fontSize: 17, margin: 0 }}
+            >
               {project.description}
             </p>
 
@@ -54,10 +64,6 @@ export default async function ProjectDetailPage({ params }: Props) {
               <div>
                 <div className="muted">구분</div>
                 <strong>{project.type}</strong>
-              </div>
-              <div>
-                <div className="muted">기간</div>
-                <strong>{project.period}</strong>
               </div>
             </div>
 
@@ -90,14 +96,29 @@ export default async function ProjectDetailPage({ params }: Props) {
               <p>{project.content.result}</p>
             </section>
 
-            <div style={{ display: "flex", gap: 12, flexWrap: "wrap", marginTop: 36 }}>
+            <div
+              style={{
+                display: "flex",
+                gap: 12,
+                flexWrap: "wrap",
+                marginTop: 36,
+              }}
+            >
               {project.links?.github && (
-                <Link href={project.links.github} className="btn-secondary" target="_blank">
+                <Link
+                  href={project.links.github}
+                  className="btn-secondary"
+                  target="_blank"
+                >
                   GitHub
                 </Link>
               )}
               {project.links?.demo && (
-                <Link href={project.links.demo} className="btn-primary" target="_blank">
+                <Link
+                  href={project.links.demo}
+                  className="btn-primary"
+                  target="_blank"
+                >
                   배포 사이트
                 </Link>
               )}

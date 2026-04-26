@@ -24,11 +24,17 @@ export default function Navbar() {
           justifyContent: "space-between",
         }}
       >
-        <Link href="/" style={{ fontSize: 32, fontWeight: 900, letterSpacing: "-0.05em" }}>
-          Kang.
+        <Link
+          href="/"
+          style={{ fontSize: 32, fontWeight: 900, letterSpacing: "-0.05em" }}
+        >
+          동현,
         </Link>
 
-        <nav className="desktop-nav" style={{ display: "flex", gap: 24, alignItems: "center" }}>
+        <nav
+          className="desktop-nav"
+          style={{ display: "flex", gap: 24, alignItems: "center" }}
+        >
           {navItems.map((item) => (
             <Link key={item.href} href={item.href} className="top-nav-link">
               {item.label}

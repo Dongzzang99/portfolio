@@ -4,7 +4,7 @@
 
 import { useEffect, useState } from "react";
 
-const WORDS = ["개발자", "신입사원", "열정있는", "착한", "멋있는"];
+const WORDS = ["개발자", "신입사원", "착한", "멋있는", "열정있는", "긍정적인"];
 
 export default function FlipText() {
   const [index, setIndex] = useState(0);
