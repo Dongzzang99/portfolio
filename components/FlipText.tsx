@@ -1,10 +1,8 @@
-//자기소개 애니메이션
-
 "use client";
 
 import { useEffect, useState } from "react";
 
-const WORDS = ["개발자", "신입사원", "착한", "멋있는", "열정있는", "긍정적인"];
+const WORDS = ["성장하는", "차분한", "꾸준한", "도전하는", "긍정적인"];
 
 export default function FlipText() {
   const [index, setIndex] = useState(0);

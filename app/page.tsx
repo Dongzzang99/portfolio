@@ -1,22 +1,32 @@
-//HOME
+// HOME
 
+import Image from "next/image";
 import Link from "next/link";
-import Navbar from "@/components/Navbar";
-import ProjectCard from "@/components/ProjectCard";
-import { projects } from "@/lib/projects";
-import Image from "next/image"; //이미지 가져오기
-import FlipText from "@/components/FlipText"; //자기소개 flip 애니메이션 import
+import { FaJava, FaJs, FaReact } from "react-icons/fa";
 import {
-  FaReact,
-  FaJs,
-} from "react-icons/fa";
-
-import {
-  SiTypescript,
   SiNextdotjs,
+  SiSpringboot,
   SiTailwindcss,
-} from "react-icons/si"; // 기술 스택 아이콘 import
+  SiTypescript,
+} from "react-icons/si";
+import FlipText from "@/components/FlipText";
+import Navbar from "@/components/Navbar";
+import { projects } from "@/lib/projects";
+
 const basePath = process.env.NODE_ENV === "production" ? "/portfolio" : "";
+
+const frontendStacks = [
+  { name: "React", icon: <FaReact /> },
+  { name: "TypeScript", icon: <SiTypescript /> },
+  { name: "Next.js", icon: <SiNextdotjs /> },
+  { name: "Tailwind CSS", icon: <SiTailwindcss /> },
+  { name: "JavaScript", icon: <FaJs /> },
+];
+
+const backendStacks = [
+  { name: "Java 17", icon: <FaJava /> },
+  { name: "Spring Boot 3.3.5", icon: <SiSpringboot /> },
+];
 
 export default function Home() {
   return (
@@ -24,99 +34,97 @@ export default function Home() {
       <Navbar />
 
       <main>
-        {/* 🔹 소개 + 기술 스택 */}
-        <section className="section">
-          <div className="container">
-            
-            {/* 🔥 소개 카드 */}
-            <div className="card" style={{ padding: 36 }}>
-              <div className="hero-profile-card">
-                
-                {/* 프로필 이미지 */}
-                <div className="hero-profile-image">
-                  <Image
-                    src={`${basePath}/profile.png`}
-                    alt="강동현 프로필"
-                    width={200}
-                    height={200}
-                    style={{
-                      borderRadius: "10%",
-                      objectFit: "cover",
-                      border: "1px solid rgba(0,0,0,0.08)",
-                    }}
-                  />
-                </div>
+        <section className="home-hero">
+          <div className="container home-hero-layout">
+            <aside className="hero-profile" aria-label="프로필 정보">
+              <Image
+                src={`${basePath}/profile.png`}
+                alt="강동현 프로필"
+                width={180}
+                height={300}
+                className="hero-profile-image"
+                priority
+              />
 
-                {/* 텍스트 영역 */}
-                <div>
-                  <span className="badge">Frontend Developer Portfolio</span>
+              <ul className="hero-profile-list">
+                <li>이름 / 강동현</li>
+                <li>생년월일 / 99.08.07</li>
+                <li className="list-email">이메일 / kaka2172@naver.com</li>
+                <li>연락처 / 010-4746-2172</li>
+              </ul>
+            </aside>
 
-                  <h1 className="hero-title">
-                    안녕하세요,
-                    <br />
-                    "<FlipText />" 강동현 입니다.
-                  </h1>
-
-                  <h3 style={{ margin: 0, fontSize: 20, fontWeight: 700 }}>
-                        꿈을 이루는 열정과 긍정의 힘,
-                      </h3>
-
-                      <p
-                        className="muted"
-                        style={{ fontSize: 18, lineHeight: 1.9, marginTop: 8 }}
-                      >
-                       이 말을 바탕으로 어릴적부터 새로운 도전을 두려워 하지 않고
-                        긍정적인 사고로 지내왔습니다.<br/>
-                        HTML,CSS,JavaScript부터 시작해 React, TypeScript, Next.js, Tailwind CSS까지
-                        기술 스택을 확장하며 프로젝트를 직접 구현해왔습니다.<br/>
-                        지금에 안주하지 않고, 앞서 나가고 스스로 발전하기 위해 늘 노력하는 개발자가 되겠습니다.<br/>
-                        감사합니다.
-                      </p>
-
-                  <div className="hero-actions">
-                    <Link href="/projects" className="btn-primary">
-                      프로젝트 보기
-                    </Link>
-                    <Link href="/about" className="btn-secondary">
-                      자기소개 보기
-                    </Link>
-                  </div>
-                </div>
-              </div>
+            <div className="home-copy">
+              <h1 className="home-title">
+                안녕하세요.
+                <br />
+                <span className="flip-line">
+                  <FlipText /> 개발자 강동현입니다.
+                </span>
+              </h1>
             </div>
-
-            {/* 🔥 기술 스택 (밑으로 이동된 부분) */}
-            <div style={{ marginTop: 40 }}>
-              <p className="section-kicker">보유 기술 스택</p>
-
-              <div className="stack-list">
-              <div className="stack-list">
-                {[
-                  { name: "React", icon: <FaReact /> },
-                  { name: "TypeScript", icon: <SiTypescript /> },
-                  { name: "Next.js", icon: <SiNextdotjs /> },
-                  { name: "Tailwind CSS", icon: <SiTailwindcss /> },
-                  { name: "JavaScript", icon: <FaJs /> },
-                ].map((item) => (
-                  <span key={item.name} className="badge stack-item">
-                    {item.icon}
-                    {item.name}
-                  </span>
-                ))}
-              </div>
-              </div>
-            </div>
-
           </div>
         </section>
 
-        {/* 🔹 프로젝트 영역 */}
-        <section className="section">
+        <section className="home-section">
+          <div className="container">
+            <div className="about-me-copy">
+              <h2 className="section-title">ABOUT ME!</h2>
+
+              <div className="text-block">
+                <p>
+                  &quot;꿈을 이루는 열정과 긍정의 힘&quot; 이라는 가치관을 바탕으로 꾸준히
+                  성장하고 있는 풀스택 개발자 강동현입니다. 사용자 입장에서
+                  편안함을 생각하고, 개발자 입장에서 최적화를 고려하며, 열정과
+                  긍정의 힘으로 성장해 나가는 개발자 입니다.
+                </p>
+                <Link href="/about" className="btn-secondary about-more-button">
+                  자세히 보기
+                </Link>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section className="home-section">
+          <div className="container split-layout">
+            <div className="section-label">
+              <h2 className="section-title">SKILLS</h2>
+            </div>
+
+            <div className="skill-groups">
+              <div className="skill-group">
+                <h3>Frontend</h3>
+                <div className="stack-list compact-stack">
+                  {frontendStacks.map((item) => (
+                    <span key={item.name} className="badge stack-item">
+                      {item.icon}
+                      {item.name}
+                    </span>
+                  ))}
+                </div>
+              </div>
+
+              <div className="skill-group">
+                <h3>Backend</h3>
+                <div className="stack-list compact-stack">
+                  {backendStacks.map((item) => (
+                    <span key={item.name} className="badge stack-item">
+                      {item.icon}
+                      {item.name}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section className="home-section">
           <div className="container">
             <div className="section-head">
               <div>
-                <p className="section-kicker">Selected Works</p>
-                <h2 className="section-title">대표 프로젝트</h2>
+                <h2 className="section-title">PROJECTS</h2>
               </div>
 
               <Link href="/projects" className="btn-secondary">
@@ -124,9 +132,27 @@ export default function Home() {
               </Link>
             </div>
 
-            <div className="project-grid">
-              {projects.slice(0, 2).map((project) => (
-                <ProjectCard key={project.slug} project={project} />
+            <div className="project-list">
+              {projects.map((project) => (
+                <article key={project.title} className="project-row">
+                  <div>
+                    <p className="project-row-type">{project.type}</p>
+                    <h3>{project.title}</h3>
+                    <p>{project.description}</p>
+                  </div>
+
+                  <div className="project-row-meta">
+                    <span>{project.tech.join(" / ")}</span>
+                    <a
+                      href={project.links?.notion || "#"}
+                      target={project.links?.notion ? "_blank" : undefined}
+                      rel={project.links?.notion ? "noreferrer" : undefined}
+                      aria-disabled={!project.links?.notion}
+                    >
+                      자세히 보기
+                    </a>
+                  </div>
+                </article>
               ))}
             </div>
           </div>

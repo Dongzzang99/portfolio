@@ -7,7 +7,6 @@ const navItems = [
   { href: "/", label: "Home" },
   { href: "/about", label: "About" },
   { href: "/projects", label: "Projects" },
-  { href: "/blog", label: "Blog" },
 ];
 
 export default function Navbar() {
@@ -28,7 +27,7 @@ export default function Navbar() {
           href="/"
           style={{ fontSize: 32, fontWeight: 900, letterSpacing: "-0.05em" }}
         >
-          동현,
+          Dong&apos;s Portfolio
         </Link>
 
         <nav
