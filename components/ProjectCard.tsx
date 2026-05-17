@@ -4,6 +4,7 @@ type Props = {
   project: Project;
 };
 
+// 프로젝트를 카드로 보여주는 컴포넌트
 export default function ProjectCard({ project }: Props) {
   const notionHref = project.links?.notion || "#";
 
@@ -26,7 +27,6 @@ export default function ProjectCard({ project }: Props) {
       <div className="info-list">
         <div>역할: {project.role}</div>
         <div>구분: {project.type}</div>
-        <div>기간: {project.period}</div>
       </div>
 
       <div style={{ marginTop: 24 }}>

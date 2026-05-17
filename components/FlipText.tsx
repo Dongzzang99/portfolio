@@ -2,8 +2,9 @@
 
 import { useEffect, useState } from "react";
 
-const WORDS = ["성장하는", "차분한", "꾸준한", "도전하는", "긍정적인"];
+const WORDS = ["성장하는", "발전하는", "꾸준한", "도전하는", "긍정적인"];
 
+// 메인 홈페이지 애니메이션 컴포넌트
 export default function FlipText() {
   const [index, setIndex] = useState(0);
 

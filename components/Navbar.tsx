@@ -9,6 +9,7 @@ const navItems = [
   { href: "/projects", label: "Projects" },
 ];
 
+// 페이지 이동 담당 컴포넌트
 export default function Navbar() {
   const [open, setOpen] = useState(false);
 

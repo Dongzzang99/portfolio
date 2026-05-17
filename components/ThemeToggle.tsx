@@ -12,6 +12,7 @@ function getInitialDarkMode() {
   return window.matchMedia("(prefers-color-scheme: dark)").matches;
 }
 
+// 라이트 모드와 다크 모드를 전환하는 컴포넌트
 export default function ThemeToggle() {
   const [dark, setDark] = useState(getInitialDarkMode);
 

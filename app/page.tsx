@@ -1,5 +1,3 @@
-// HOME
-
 import Image from "next/image";
 import Link from "next/link";
 import { FaJava, FaJs, FaReact } from "react-icons/fa";
@@ -73,10 +71,10 @@ export default function Home() {
 
               <div className="text-block">
                 <p>
-                  &quot;꿈을 이루는 열정과 긍정의 힘&quot; 이라는 가치관을 바탕으로 꾸준히
-                  성장하고 있는 풀스택 개발자 강동현입니다. 사용자 입장에서
-                  편안함을 생각하고, 개발자 입장에서 최적화를 고려하며, 열정과
-                  긍정의 힘으로 성장해 나가는 개발자 입니다.
+                  &quot;꿈을 이루는 열정과 긍정의 힘&quot; 이라는 가치관을
+                  바탕으로 꾸준히 성장하고 있는 풀스택 개발자 강동현입니다.
+                  사용자 입장에서 편안함을 생각하고, 개발자 입장에서 최적화를
+                  고려하며, 열정과 긍정의 힘으로 성장해 나가는 개발자 입니다.
                 </p>
                 <Link href="/about" className="btn-secondary about-more-button">
                   자세히 보기
