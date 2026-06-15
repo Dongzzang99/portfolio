@@ -47,6 +47,17 @@ export const projects: Project[] = [
     },
   },
   {
+    title: "Studyroom-reservation📚",
+    description: "스터디룸 예약 사이트 입니다.",
+    tech: ["React", "Java", "Spring Boot", "MySQL"],
+    role: "프론트엔드 개발, 백엔드 개발",
+    type: "개인 프로젝트",
+    links: {
+      notion:
+        "https://app.notion.com/p/StudyRoom-37f610e6330a80578254ee31826a6529?source=copy_link",
+    },
+  },
+  {
     title: "포트폴리오 사이트📃",
     description: "제 자기소개와 포트폴리오를 작성해놓은 사이트 입니다.",
     tech: ["React", "JavaScript", "Tailwind", "Next.JS", "TypeScript"],
