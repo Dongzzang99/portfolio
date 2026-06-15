@@ -119,18 +119,21 @@ export default function AboutPage() {
                 </p>
 
                 <p className="muted" style={{ lineHeight: 1.9 }}>
-                  IKEA 클론 프로젝트에서는 구조 개선과 리팩토링을 통해
-                  유지보수성과 확장성을 높였으며, TypeScript를 도입해 코드
-                  안정성과 가독성을 향상시켰습니다.
+                  IKEA 클론 프로젝트에서는 React 기반 프론트엔드 프로젝트를
+                  Spring Boot와 MySQL 기반의 풀스택 구조로 고도화하며, 상품
+                  조회, 장바구니, 로그인, 결제 테스트 기능을 구현했습니다. 이
+                  과정에서 Docker와 AWS를 활용한 배포 환경 구성, Sharp를 활용한
+                  이미지 최적화 경험도 쌓았습니다.
                 </p>
 
                 <p className="muted" style={{ lineHeight: 1.9 }}>
-                  또한 IKEA 클론 프로젝트에 Spring Boot와 DB를 활용해 백엔드
-                  기능을 더한 ver.2로 확장했습니다. ver.2 에서는 단순하게 화면을
-                  디자인 하거나 정적인 화면을 보여주는 데서 그치지 않고, 서버와
-                  데이터 베이스를 연결해 실제로 데이터를 관리하는 구조로
-                  구현하였습니다. 이를 통하여 UI 구현에 나아가 백엔드와 api, DB
-                  까지의 흐름을 고려한 웹 서비스 구조를 경험하였습니다.
+                  또한 스터디룸 예약 프로젝트에서는 Spring Boot와 MySQL 기반
+                  백엔드 서비스를 구축하며, 회원 인증, 스터디룸 예약, Toss
+                  Payments 결제, 관리자 운영 기능을 구현했습니다. 이 과정에서
+                  JWT Access/Refresh Token, 결제 대기 예약 만료 처리, 비관적
+                  락을 활용한 동시 예약방지, JavaMailSender 기반 예약 확정
+                  이메일 발송, Railway와 Netlify를 활용한 배포 환경 구성 경험을
+                  쌓았습니다.
                 </p>
               </div>
 
